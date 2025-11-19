@@ -1,34 +1,91 @@
-Read Only by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+<div align="center">
+
+💼 Sobre mim
+
+Olá! Meu nome é Bernardo Gomes, sou apaixonado por tecnologia, dados e tudo que envolve criar soluções.
+Este portfólio é um ponto de partida — em breve ficará muito mais completo.
+
+📬 Contato
+
+📧 Email: bernardogoems@gmail.com
+
+💼 LinkedIn: https://www.linkedin.com/in/bernardo-gomes-356307168/
+
+🧑‍💻 GitHub: https://github.com/BernardoGoems
 
 
-Just a super simple single-page responsive template built for personal sites and portfolios
-(although it'd definitely work for other stuff too). Includes a contact form, pre-styled
-elements, and Sass sources.
+# 🌐 Freebase Portfolio  
+### Meu portfólio pessoal hospedado no GitHub Pages  
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+<img src="https://github.com/BernardoGoems/freebaseportfolio/raw/main/images/banner.png" alt="Banner do projeto" width="100%" />
 
-(* = Not included)
+---
 
-Feedback, bug reports, and comments are not only welcome, but strongly encouraged :)
+### 📌 Status do Projeto
+🚀 **Online e funcionando**  
+🔧 Em constante melhoria
 
-AJ
-aj@lkn.io | @ajlkn
+---
 
-PS: Not sure how to get that contact form working? Give formspree.io a try (it's awesome).
+### 🛠️ Badges & Tecnologias
+
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+<img src="https://img.shields.io/badge/GitHub%20Pages-181717?style=for-the-badge&logo=github&logoColor=white" />
+<img src="https://img.shields.io/badge/Static%20Site-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+
+</div>
+
+---
+
+## 🌍 Acesso ao site
+
+Você pode acessar o portfólio diretamente pelo link:
+
+👉 **https://bernardogoems.github.io/freebaseportfolio/**
+
+---
+
+## 📁 Estrutura do projeto
+
+/assets → CSS, fontes e scripts
+/images → Imagens utilizadas no site
+index.html → Página principal
+.github → Workflow de deploy opcional
 
 
-Credits:
+---
 
-	Demo Images:
-		Unsplash (unsplash.com)
+## 🚀 Funcionalidades
 
-	Icons:
-		Font Awesome (fontawesome.io)
+- Layout simples e responsivo  
+- Seções de:
+  - Sobre  
+  - Coisas que posso fazer  
+  - Conquistas  
+  - Contato  
+- Ícones sociais  
+- Visual limpo e direto ao ponto  
+- Totalmente hospedado no GitHub Pages  
 
-	Other:
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+---
+
+## 🧩 Prévia do Projeto
+
+> Coloque aqui um GIF opcional mostrando o site.  
+Você pode gravar usando **ScreenToGif** ou me pedir pra gerar um mockup digital.
+
+Exemplo:
+
+(images/preview.gif)
+
+yaml
+Copiar código
+
+---
+
+## 🛠️ Como rodar localmente
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/BernardoGoems/freebaseportfolio
