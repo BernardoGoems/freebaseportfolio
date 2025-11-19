@@ -1,5 +1,3 @@
-<div align="center">
-
 💼 Sobre mim
 
 Olá! Meu nome é Bernardo Gomes, sou apaixonado por tecnologia, dados e tudo que envolve criar soluções.
