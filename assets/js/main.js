@@ -1,159 +1,220 @@
-/*
-	Read Only by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
 
-(function($) {
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
 
-	var $window = $(window),
-		$body = $('body'),
-		$header = $('#header'),
-		$titleBar = null,
-		$nav = $('#nav'),
-		$wrapper = $('#wrapper');
+// Mobile menu toggle
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const menuIcon = mobileMenuBtn.querySelector('.menu-icon');
+const closeIcon = mobileMenuBtn.querySelector('.close-icon');
 
-	// Breakpoints.
-		breakpoints({
-			xlarge:   [ '1281px',  '1680px' ],
-			large:    [ '1025px',  '1280px' ],
-			medium:   [ '737px',   '1024px' ],
-			small:    [ '481px',   '736px'  ],
-			xsmall:   [ null,      '480px'  ],
-		});
+mobileMenuBtn.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    
+    if (isOpen) {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+    } else {
+        mobileMenu.classList.remove('hidden');
+        menuIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+    }
+});
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+// Smooth scroll for navigation links
+const allNavLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
 
-	// Tweaks/fixes.
+allNavLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const href = link.getAttribute('href');
+        const targetElement = document.querySelector(href);
+        
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            
+            // Close mobile menu if open
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
+        }
+    });
+});
 
-		// Polyfill: Object fit.
-			if (!browser.canUse('object-fit')) {
+// Intersection Observer for fade-in animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
 
-				$('.image[data-position]').each(function() {
+const fadeInElements = document.querySelectorAll('.tech-item, .service-item, .stat-item');
 
-					var $this = $(this),
-						$img = $this.children('img');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0) scale(1)';
+        }
+    });
+}, observerOptions);
 
-					// Apply img as background.
-						$this
-							.css('background-image', 'url("' + $img.attr('src') + '")')
-							.css('background-position', $this.data('position'))
-							.css('background-size', 'cover')
-							.css('background-repeat', 'no-repeat');
+fadeInElements.forEach(element => {
+    observer.observe(element);
+});
 
-					// Hide img.
-						$img
-							.css('opacity', '0');
+// Add hover effects for service items
+const serviceItems = document.querySelectorAll('.service-item');
 
-				});
+serviceItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        item.style.transform = 'translateX(10px)';
+    });
+    
+    item.addEventListener('mouseleave', () => {
+        item.style.transform = 'translateX(0)';
+    });
+});
 
-			}
+// Add parallax effect to hero photo on scroll
+const heroPhotoContainer = document.querySelector('.hero-photo-container');
 
-	// Header Panel.
+if (heroPhotoContainer) {
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+        const maxScroll = window.innerHeight;
+        
+        if (scrollPosition < maxScroll) {
+            const translateY = scrollPosition * 0.3;
+            heroPhotoContainer.style.transform = `translateY(${translateY}px)`;
+        }
+    });
+}
 
-		// Nav.
-			var $nav_a = $nav.find('a');
+// Animate stats on scroll
+const statItems = document.querySelectorAll('.stat-item');
+let animated = false;
 
-			$nav_a
-				.addClass('scrolly')
-				.on('click', function() {
+const animateStats = () => {
+    if (animated) return;
+    
+    const statsSection = document.querySelector('.stats-grid');
+    const rect = statsSection.getBoundingClientRect();
+    const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+    
+    if (isVisible) {
+        animated = true;
+        
+        statItems.forEach((item, index) => {
+            const statValue = item.querySelector('.stat-value');
+            const targetValue = parseInt(statValue.textContent);
+            let currentValue = 0;
+            const duration = 2000; // 2 seconds
+            const increment = targetValue / (duration / 16); // 60fps
+            
+            const animate = () => {
+                currentValue += increment;
+                if (currentValue < targetValue) {
+                    statValue.textContent = Math.floor(currentValue);
+                    requestAnimationFrame(animate);
+                } else {
+                    statValue.textContent = targetValue;
+                }
+            };
+            
+            setTimeout(() => {
+                animate();
+            }, index * 100);
+        });
+    }
+};
 
-					var $this = $(this);
+window.addEventListener('scroll', animateStats);
+animateStats(); // Check on load
 
-					// External link? Bail.
-						if ($this.attr('href').charAt(0) != '#')
-							return;
+// Add button click effects
+const buttons = document.querySelectorAll('.btn');
 
-					// Deactivate all links.
-						$nav_a.removeClass('active');
+buttons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        // Create ripple effect
+        const ripple = document.createElement('span');
+        const rect = button.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+        
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        ripple.classList.add('ripple');
+        
+        button.appendChild(ripple);
+        
+        setTimeout(() => {
+            ripple.remove();
+        }, 600);
+    });
+});
 
-					// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
-						$this
-							.addClass('active')
-							.addClass('active-locked');
+// Add CSS for ripple effect dynamically
+const style = document.createElement('style');
+style.textContent = `
+    .btn {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .ripple {
+        position: absolute;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.3);
+        transform: scale(0);
+        animation: ripple-animation 0.6s ease-out;
+        pointer-events: none;
+    }
+    
+    @keyframes ripple-animation {
+        to {
+            transform: scale(4);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(style);
 
-				})
-				.each(function() {
+// Prevent default button actions (since this is a demo)
+document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log('Button clicked:', btn.textContent);
+    });
+});
 
-					var	$this = $(this),
-						id = $this.attr('href'),
-						$section = $(id);
+// Add smooth transitions for tech stack items
+const techItems = document.querySelectorAll('.tech-item');
 
-					// No section for this link? Bail.
-						if ($section.length < 1)
-							return;
+techItems.forEach((item, index) => {
+    setTimeout(() => {
+        item.style.opacity = '1';
+        item.style.transform = 'scale(1)';
+    }, index * 100);
+});
 
-					// Scrollex.
-						$section.scrollex({
-							mode: 'middle',
-							top: '5vh',
-							bottom: '5vh',
-							initialize: function() {
-
-								// Deactivate section.
-									$section.addClass('inactive');
-
-							},
-							enter: function() {
-
-								// Activate section.
-									$section.removeClass('inactive');
-
-								// No locked links? Deactivate all links and activate this section's one.
-									if ($nav_a.filter('.active-locked').length == 0) {
-
-										$nav_a.removeClass('active');
-										$this.addClass('active');
-
-									}
-
-								// Otherwise, if this section's link is the one that's locked, unlock it.
-									else if ($this.hasClass('active-locked'))
-										$this.removeClass('active-locked');
-
-							}
-						});
-
-				});
-
-		// Title Bar.
-			$titleBar = $(
-				'<div id="titleBar">' +
-					'<a href="#header" class="toggle"></a>' +
-					'<span class="title">' + $('#logo').html() + '</span>' +
-				'</div>'
-			)
-				.appendTo($body);
-
-		// Panel.
-			$header
-				.panel({
-					delay: 500,
-					hideOnClick: true,
-					hideOnSwipe: true,
-					resetScroll: true,
-					resetForms: true,
-					side: 'right',
-					target: $body,
-					visibleClass: 'header-visible'
-				});
-
-	// Scrolly.
-		$('.scrolly').scrolly({
-			speed: 1000,
-			offset: function() {
-
-				if (breakpoints.active('<=medium'))
-					return $titleBar.height();
-
-				return 0;
-
-			}
-		});
-
-})(jQuery);
+// Log when page is fully loaded
+window.addEventListener('load', () => {
+    console.log('Portfolio loaded successfully!');
+    console.log('Developed with ♥ and HTML/CSS/JavaScript');
+});
