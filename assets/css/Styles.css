@@ -103,7 +103,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #ff6b51;
+    color: #5137e2ff;
 }
 
 .mobile-menu-btn {
@@ -144,7 +144,7 @@ body {
 }
 
 .mobile-nav-link:hover {
-    color: #ff6b51;
+    color: #5137e2ff;
     background-color: #1c1f26;
 }
 
@@ -200,7 +200,7 @@ body {
 }
 
 .accent-dot {
-    color: #ff6b51;
+    color: #5137e2ff;
 }
 
 .hero-subtitle-wrapper {
@@ -215,7 +215,7 @@ body {
     top: 50%;
     width: 3rem;
     height: 2px;
-    background-color: #ff6b51;
+    background-color: #5137e2ff;
 }
 
 .hero-subtitle {
@@ -248,20 +248,20 @@ body {
 }
 
 .btn-primary {
-    background-color: #ff6b51;
+    background-color: #5137e2ff;
     color: white;
     box-shadow: 0 10px 25px rgba(255, 107, 81, 0.2);
 }
 
 .btn-primary:hover {
-    background-color: #ff5a41;
+    background-color: #3d21daff;
     transform: scale(1.05);
 }
 
 .btn-secondary {
     background-color: transparent;
     color: white;
-    border: 2px solid #ff6b51;
+    border: 2px solid #3d21daff;
 }
 
 .btn-secondary:hover {
@@ -312,7 +312,7 @@ body {
     width: 16rem;
     height: 16rem;
     border-radius: 50%;
-    background-color: #ff6b51;
+    background-color: #5137e2ff;
     opacity: 0.9;
     z-index: 0;
 }
@@ -324,7 +324,7 @@ body {
     transform: translateX(-50%);
     width: 18rem;
     height: 18rem;
-    background-color: #ff6b51;
+    background-color: #5137e2ff;
     border-radius: 50%;
     filter: blur(120px);
     opacity: 0.4;
@@ -401,7 +401,7 @@ body {
 }
 
 .tech-item:hover {
-    color: #ff6b51;
+    color: #5137e2ff;
     transform: scale(1.1);
 }
 
@@ -433,7 +433,7 @@ body {
     top: 0;
     bottom: 0;
     width: 2px;
-    background-color: #ff6b51;
+    background-color: #5137e2ff;
 }
 
 .service-item {
@@ -455,7 +455,7 @@ body {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #ff6b51;
+    background-color: #5137e2ff;
     z-index: 10;
 }
 
@@ -473,7 +473,7 @@ body {
 }
 
 .service-item:hover .service-icon {
-    border-color: #ff6b51;
+    border-color: #5137e2ff;
 }
 
 .service-title {
@@ -484,7 +484,7 @@ body {
 }
 
 .service-item:hover .service-title {
-    color: #ff6b51;
+    color: #5137e2ff;
 }
 
 .service-description {
@@ -565,7 +565,7 @@ body {
 .stat-symbol {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #ff6b51;
+    color: #5137e2ff;
 }
 
 .stat-label {
@@ -612,8 +612,8 @@ body {
 }
 
 .social-link:hover {
-    color: #ff6b51;
-    border-color: #ff6b51;
+    color: #5137e2ff;
+    border-color: #5137e2ff;
     transform: translateY(-4px) scale(1.1);
 }
 
@@ -637,7 +637,7 @@ body {
 }
 
 .heart {
-    color: #ff6b51;
+    color: #5137e2ff;
 }
 
 /* Responsive Design - Tablet */
