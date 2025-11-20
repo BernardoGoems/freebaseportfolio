@@ -1,81 +1,89 @@
-💼 Sobre mim
-
-Olá! Meu nome é Bernardo Gomes, sou apaixonado por tecnologia, dados e tudo que envolve criar soluções.
-Este portfólio é um ponto de partida — em breve ficará muito mais completo.
-
-📬 Contato
-
-📧 Email: bernardogoems@gmail.com
-
-💼 LinkedIn: https://www.linkedin.com/in/bernardo-gomes-356307168/
-
-🧑‍💻 GitHub: https://github.com/BernardoGoems
-
-
 # 🌐 Freebase Portfolio  
 ### Meu portfólio pessoal hospedado no GitHub Pages  
 
-<img src="https://github.com/BernardoGoems/freebaseportfolio/raw/main/images/banner.png" alt="Banner do projeto" width="100%" />
+<p align="center">
+  <img src="https://github.com/BernardoGoems/freebaseportfolio/raw/main/images/banner.png" 
+       alt="Banner do projeto" 
+       width="100%" />
+</p>
 
 ---
 
-### 📌 Status do Projeto
-🚀 **Online e funcionando**  
-🔧 Em constante melhoria
+## 💼 Sobre mim
+
+Olá! Meu nome é **Bernardo Gomes**, sou apaixonado por tecnologia, dados e criação de soluções que fazem diferença.  
+Este portfólio é apenas o início — em breve ficará ainda mais completo e refinado.
 
 ---
 
-### 🛠️ Badges & Tecnologias
+## 📬 Contato
 
-<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
-<img src="https://img.shields.io/badge/GitHub%20Pages-181717?style=for-the-badge&logo=github&logoColor=white" />
-<img src="https://img.shields.io/badge/Static%20Site-000000?style=for-the-badge&logo=vercel&logoColor=white" />
-
-</div>
+- 📧 **Email:** [bernardogoems@gmail.com](mailto:bernardogoems@gmail.com)  
+- 💼 **LinkedIn:** https://www.linkedin.com/in/bernardo-gomes-356307168/  
+- 🧑‍💻 **GitHub:** https://github.com/BernardoGoems  
 
 ---
 
-## 🌍 Acesso ao site
+## 📌 Status do Projeto
 
-Você pode acessar o portfólio diretamente pelo link:
+- 🚀 **Online e funcionando perfeitamente**  
+- 🔧 Em constante aprimoramento  
+- ✨ Novas seções e melhorias visuais chegando  
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+<p>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub%20Pages-181717?style=for-the-badge&logo=github&logoColor=white" />
+  <img src="https://img.shields.io/badge/Static%20Site-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+</p>
+
+---
+
+## 🌍 Acesse o site
 
 👉 **https://bernardogoems.github.io/freebaseportfolio/**
 
 ---
 
-## 📁 Estrutura do projeto
+## 📁 Estrutura do Projeto
 
-/assets → CSS, fontes e scripts
+/assets → CSS, scripts e fontes
 /images → Imagens utilizadas no site
 index.html → Página principal
-.github → Workflow de deploy opcional
+.github → (Opcional) workflow de deploy
 
+yaml
+Copiar código
 
 ---
 
 ## 🚀 Funcionalidades
 
-- Layout simples e responsivo  
-- Seções de:
-  - Sobre  
-  - Coisas que posso fazer  
-  - Conquistas  
+- Layout simples, limpo e responsivo  
+- Seções:
+  - Sobre mim  
+  - Habilidades  
+  - Serviços  
+  - Projetos  
   - Contato  
-- Ícones sociais  
-- Visual limpo e direto ao ponto  
-- Totalmente hospedado no GitHub Pages  
+- Ícones sociais integrados  
+- Visual moderno  
+- Hospedado gratuitamente via GitHub Pages  
 
 ---
 
 ## 🧩 Prévia do Projeto
 
-> Coloque aqui um GIF opcional mostrando o site.  
-Você pode gravar usando **ScreenToGif** ou me pedir pra gerar um mockup digital.
+> (Opcional) Adicione aqui um GIF ou mockup mostrando o site.  
+Use **ScreenToGif**, **OBS** ou me peça para gerar um mockup bonito.
 
 Exemplo:
 
-(images/preview.gif)
+/images/preview.gif
 
 yaml
 Copiar código
@@ -84,6 +92,11 @@ Copiar código
 
 ## 🛠️ Como rodar localmente
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/BernardoGoems/freebaseportfolio
+```bash
+# Clonar o repositório
+git clone https://github.com/BernardoGoems/freebaseportfolio
+
+# Acessar a pasta
+cd freebaseportfolio
+
+# Abrir o index.html no navegador
