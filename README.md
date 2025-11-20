@@ -2,7 +2,7 @@
 ### Meu portfólio pessoal hospedado no GitHub Pages  
 
 <p align="center">
-  <img src="https://github.com/BernardoGoems/freebaseportfolio/raw/main/images/banner.png" 
+  <img src="./images/banner.png" 
        alt="Banner do projeto" 
        width="100%" />
 </p>
@@ -11,8 +11,7 @@
 
 ## 💼 Sobre mim
 
-Olá! Meu nome é **Bernardo Gomes**, sou apaixonado por tecnologia, dados e criação de soluções que fazem diferença.  
-Este portfólio é apenas o início — em breve ficará ainda mais completo e refinado.
+Olá! Meu nome é **Bernardo Gomes**, sou apaixonado por tecnologia, dados e criação de soluções que fazem diferença.
 
 ---
 
@@ -73,30 +72,3 @@ Copiar código
 - Ícones sociais integrados  
 - Visual moderno  
 - Hospedado gratuitamente via GitHub Pages  
-
----
-
-## 🧩 Prévia do Projeto
-
-> (Opcional) Adicione aqui um GIF ou mockup mostrando o site.  
-Use **ScreenToGif**, **OBS** ou me peça para gerar um mockup bonito.
-
-Exemplo:
-
-/images/preview.gif
-
-yaml
-Copiar código
-
----
-
-## 🛠️ Como rodar localmente
-
-```bash
-# Clonar o repositório
-git clone https://github.com/BernardoGoems/freebaseportfolio
-
-# Acessar a pasta
-cd freebaseportfolio
-
-# Abrir o index.html no navegador
