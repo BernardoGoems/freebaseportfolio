@@ -487,6 +487,15 @@ body {
     color: #ff6b51;
 }
 
+.service-description {
+    color: #d0d0d0;
+    font-size: 0.95rem;
+    margin-top: 6px;
+    margin-left: 44px; /* alinhado com o título */
+    line-height: 1.4rem;
+    max-width: 260px;
+}
+
 /* About Section */
 .about-section {
     display: flex;
