@@ -493,7 +493,7 @@ body {
     margin-top: 6px;
     margin-left: 44px; /* alinhado com o título */
     line-height: 1.4rem;
-    max-width: 260px;
+    max-width: 100%;
 }
 
 .service-text {
