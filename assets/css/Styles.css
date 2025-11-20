@@ -462,6 +462,8 @@ body {
 .service-icon {
     width: 3.5rem;
     height: 3.5rem;
+    min-width: 3.5rem;
+    min-height: 3.5rem;
     border-radius: 0.5rem;
     background-color: #1c1f26;
     border: 1px solid #30363d;
@@ -469,6 +471,7 @@ body {
     align-items: center;
     justify-content: center;
     color: white;
+    flex-shrink: 0;
     transition: border-color 0.3s ease;
 }
 
