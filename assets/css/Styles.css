@@ -17,14 +17,8 @@ body {
     overflow-x: hidden;
 }
 
-.photo-base {
-    width: 220px;          /* ajuste conforme a largura da sua foto */
-    height: 40px;          /* altura da base */
-    background: #0e0f11;   /* mesma cor do fundo do site */
-    border-radius: 50%;    /* deixa formato de elipse */
-    margin: -10px auto 0 auto; /* cola na parte inferior da foto */
-    z-index: 3;
-    position: relative;
+.profile-photo img {
+    mask-image: linear-gradient(to bottom, black 70%, transparent);
 }
 
 /* Utilities */
