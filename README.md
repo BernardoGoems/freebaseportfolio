@@ -55,9 +55,6 @@ Olá! Meu nome é **Bernardo Gomes**, sou apaixonado por tecnologia, dados e cri
 index.html → Página principal
 .github → (Opcional) workflow de deploy
 
-yaml
-Copiar código
-
 ---
 
 ## 🚀 Funcionalidades
@@ -72,4 +69,5 @@ Copiar código
 - Ícones sociais integrados  
 - Visual moderno  
 - Hospedado gratuitamente via GitHub Pages  
+
 
